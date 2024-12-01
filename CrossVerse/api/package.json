@@ -1,0 +1,10 @@
+{
+  "name": "@agoric-nft-marketplace/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@agoric/eventual-send": "0.14.0",
+    "@agoric/zoe": "0.21.0"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "agoric-nft-marketplace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "contract",
+    "api",
+    "ui"
+  ],
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "scripts": {
+    "build": "agoric build",
+    "test": "ava",
+    "start": "agoric start --reset",
+    "deploy": "agoric deploy contract/deploy.js api/deploy.js",
+    "postinstall": "agoric install",
+    "dev:ui": "cd ui && npm run dev"
+  },
+  "dependencies": {
+    "@agoric/eventual-send": "0.14.0",
+    "@agoric/zoe": "0.21.0",
+    "@agoric/store": "0.6.0",
+    "@agoric/ertp": "0.13.0",
+    "@agoric/notifier": "0.4.0",
+    "@agoric/sdk": "4.0.0",
+    "@agoric/assert": "0.5.0",
+    "@agoric/marshal": "0.7.0"
+  },
+  "devDependencies": {
+    "ava": "3.15.0",
+    "@agoric/swingset-vat": "0.24.1",
+    "@endo/init": "0.5.33",
+    "@agoric/install-ses": "0.5.27"
+  },
+  "ava": {
+    "files": [
+      "test/**/test-*.js"
+    ],
+    "timeout": "10m"
+  }
+}
